@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Main {
 
 	public static void main(String[] args) {
-		System.out.print("1.가입  2.조회  >> ");
+		System.out.print("1.가입  2.조회  3.삭제 4.수정 >> ");
 		Member mem;
 		Scanner s = new Scanner(System.in);
 		int choice = s.nextInt();
@@ -30,6 +30,13 @@ public class Main {
 			Member m = dao.selectOne(memNum);
 			System.out.println("이름/나이/고객번호/전화번호");
 			System.out.println(m.getName()+"/"+m.getAge()+"/"+m.getMemNum()+"/"+m.getTel());
+		
+		}else if(choice == 3) {
+			System.out.print("memNum >> ");
+			String memNum = s.next();
+		MemberDAO dao = new MemberDAO();
+		Member m = dao.Delete(memNum);
+		System.out.println(memNum+"이 삭제되었습니다");
 		}
 	}
 	
