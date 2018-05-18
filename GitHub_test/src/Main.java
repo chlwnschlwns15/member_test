@@ -1,8 +1,5 @@
 import java.util.Scanner;
 
-import JDBC2_Model_DAO.Member;
-import JDBC2_Model_DAO.MemberDAO;
-
 public class Main {
 
 	public static void main(String[] args) {
