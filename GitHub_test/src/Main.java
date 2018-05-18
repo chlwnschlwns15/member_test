@@ -46,10 +46,12 @@ public class Main {
 			String name = s.next();
 			System.out.print("나이 >> ");
 			int age = s.nextInt();
-			
 			System.out.print("전화번호 >> ");
 			String tel = s.next();
-			
+			MemberDAO dao = new MemberDAO();
+			Member m = dao.Update(name, age, tel, memNum);
+			System.out.println("이름/나이/고객번호/전화번호");
+			System.out.println(m.getName()+"/"+m.getAge()+"/"+m.getMemNum()+"/"+m.getTel());
 			
 		}
 	}

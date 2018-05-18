@@ -93,7 +93,7 @@ public class MemberDAO {
 		return m;
 	}
 	
-	public void Delete(String Memnum) {
+	public Member Delete(String Memnum) {
 		String url = "jdbc:oracle:thin:@localhost:1521:xe";
 		String user = "test";
 		String password = "test";
@@ -135,13 +135,13 @@ public class MemberDAO {
 
 		
 
-		
+		return m;
 		
 		
 	}
 	
 	
-	public void Update(String name, int age, String tel, String memNum) {	// JDBC 사용하기
+	public Member Update(String name, int age, String tel, String memNum) {	// JDBC 사용하기
 		String url = "jdbc:oracle:thin:@localhost:1521:xe";
 		String user = "test";
 		String password = "test";
@@ -184,7 +184,7 @@ public class MemberDAO {
 			}						
 		}
 
-		
+		return m;
 	}
 
 	
