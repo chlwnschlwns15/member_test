@@ -99,6 +99,7 @@ public class MemberDAO {
 		String password = "test";
 		Connection con = null;
 		PreparedStatement psmt = null;
+		Member m = null;
 		// 1. 드라이버 로딩
 		try { //try에는 예외가 걸릴 것 같은 것을 메소드를 작성.
 			  //catch에는 예외발생시 진행 할 것
@@ -146,6 +147,7 @@ public class MemberDAO {
 		String user = "test";
 		String password = "test";
 		Connection con = null;
+		Member m = null;
 		PreparedStatement psmt = null;
 		// 1. 드라이버 로딩
 		try { //try에는 예외가 걸릴 것 같은 것을 메소드를 작성.
@@ -160,6 +162,7 @@ public class MemberDAO {
 			psmt.setInt(2, age);
 			psmt.setString(3, tel);
 			psmt.setString(4, memNum);
+			m = new Member(name,age,memNum,tel);
 			//4. 실행하기
 			int num = psmt.executeUpdate(); // 반환이 int 형으로 한 번 실행했을 때 몇 번이나 해당 문구들이 실행한지 돌려줌.
 			System.out.println(num);
@@ -183,7 +186,7 @@ public class MemberDAO {
 				e.printStackTrace();
 			}						
 		}
-
+        
 		return m;
 	}
 
